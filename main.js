@@ -93,7 +93,7 @@ function endGame() {
   welcomePanel.style.zIndex = '1';
   welcomePara.textContent = 'OH NO!! Your emo became too well-adjusted; now she\'ll be off to hang out at the mall, listen to Taylor Swift and bake cookies.'
   btnStart.textContent = 'Restart Emogotchi?';
-  spawnNotification('YOU TOTAL LOSER. How could do do this to me?','img/' + curImage + '_head.png','Emogotchi says');
+  spawnNotification('YOU TOTAL LOSER. How could you do this to me?','img/' + curImage + '_head.png','Emogotchi says');
 }
 
 // spawn a permission
