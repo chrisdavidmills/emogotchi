@@ -1,0 +1,18 @@
+{
+  "version": "0.1",
+  "name": "Emogotchi",
+  "description": "Make your Emogotchi miserable, otherwise she might end up well-adjusted.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/emo_head.png"
+  },
+  "developer": {
+    "name": "Chris Mills",
+    "url": "/"
+  },
+  "permissions": {
+    "desktop-notification": {
+      "description": "Needed for creating system notifications."
+    }
+  }
+}

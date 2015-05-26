@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=480">
+
+    <title>Emogotchi</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <section class="welcome">
+      <h1>Welcome to Emogotchi!</h1>
+      <p>I'm sure you'll enjoy playing with your new Emo friend; she calls herself Raven ... or something. Made sure to keep your emo miserable, otherwise she'll end up well-adjusted.</p>
+      <button class="start">Start</button>
+    </section>
+    <section class="game">
+      <img alt="my emo" src="img/emo.png">
+      <div class="misery">
+        <div class="current-level"></div>
+        <p>Emo-level: 98%</p>
+      </div>
+      <div class="button-bar">
+	    <button class="sun" data-score="-100">Go out in the sun</button>
+	    <button class="happy" data-score="-60">Think happy thoughts</button>
+	    <button class="tragic" data-score="150">Write tragic poetry</button>
+	    <button class="cd" data-score="200">Buy Black Veiled Brides CD</button>
+	    <button class="selfie" data-score="120">Take angst-ridden selfie</button>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

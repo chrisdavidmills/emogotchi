@@ -1,0 +1,144 @@
+/* || General styling */
+
+.welcome {
+	z-index: 1;
+}
+
+html,body {
+	margin: 0;
+}
+
+html {
+	height: 100%;
+	font-size: 10px;
+	font-family: sans-serif;
+}
+
+body {
+	width: 70%;
+	height: inherit;
+	margin: 0 auto;
+	min-width: 320px;
+	max-width: 426px;
+	min-height: 600px;
+	max-height: 700px;
+	position: relative;
+}
+
+section {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: black;
+	color: white;
+}
+
+/* || Displaying the main image */
+
+.game img {
+	display: block;
+	max-width: 98%;
+	margin: 2rem auto;
+}
+
+/* || The misery progress bar */
+
+.misery {
+	width: 98%;
+	margin: 0 auto;
+	height: 4rem;
+	background-color: white;
+	margin-bottom: 2rem;
+	position: relative;
+}
+
+.current-level {
+	height: 100%;
+	background-color: red;
+}
+
+.misery p {
+	color: black;
+	line-height: 1;
+	font-size: 1.4rem;
+	padding-right: 1rem;
+	text-align: right;
+	width: 200px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/* || Buttons */
+
+button {
+	display: block;
+	border: 0;
+	width: 98%;
+	margin: 0 auto;
+	font-size: 1.4rem;
+	box-shadow: inset 3px 3px 5px rgba(255,255,255,0.75),
+	            inset -3px -3px 5px rgba(0,0,0,0.25);
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.10) 40%, rgba(0,0,0,0));
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+.button-bar {
+	height: calc(100% - 395px);
+}
+
+.button-bar button {
+	height: 20%;
+}
+
+.button-bar button:hover {
+	background-color: #fff;  
+}
+
+.button-bar button:active {
+	box-shadow: inset 3px 3px 5px rgba(0,0,0,0.25),
+	            inset -3px -3px 5px rgba(255,255,255,0.75);  
+}
+
+@media (max-width: 600px) {
+  body {
+	width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .button-bar {
+    height: calc(100% - 348.6px);
+  }
+
+  body {
+	min-height: 480px;
+  }
+}
+
+.welcome button {
+  height: 10%;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1%;
+  right: 1%;
+  width: 98%;
+  font-size: 2rem;
+}
+
+/* || Welcome screen styling */
+
+.welcome h1 {
+	background: url(img/emogotchi-title.png) center no-repeat;
+	height: 200px;
+	background-size: 100% auto;
+	text-indent: -100%;
+}
+
+.welcome p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  text-align: center;
+  padding: 2rem;
+}
