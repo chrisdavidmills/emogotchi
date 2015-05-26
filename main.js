@@ -17,7 +17,7 @@ var quotes = [
   'Why? Whhhyyyyyy?',
   'I\'m hungry! Why is there nothing to eat around here?',
   'I hate it when people say I look like a goth. Emos are so different.',
-  'My floor-length leather trenchcoat makes me feel so hot when I go out...',
+  'My floor-length leather trenchcoat makes me feel too hot...',
   'My thoughts give way to nothing but dark sollioquies.',
   'My toast is slightly burnt. Please end my suffering.'
 ]
