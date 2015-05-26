@@ -3,8 +3,6 @@
 var score;
 var whingeTally = 0;
 
-var requestId;
-
 function init() {
   score = 9500;
 }
@@ -131,15 +129,14 @@ function mainLoop() {
 	score -= 3;
 	whingeTally += 1;
 	updateDisplay();
-    if(score <= 0) {
-      window.cancelAnimationFrame(requestId);
-      score = 0;
-      endGame();
-    }
-
+  if(score <= 0) {
+    score = 0;
+    endGame();
+  } else {
     if(whingeTally % 750 === 0) {
       randomNotification();
     }
-
-    var requestId = window.requestAnimationFrame(mainLoop);
+  
+    window.requestAnimationFrame(mainLoop);
+  }
 }
