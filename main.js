@@ -79,7 +79,7 @@ function updateDisplay() {
   }
 
   if(updateImage !== curImage) {
-  	spawnNotification('Whaaa, I\'m becoming well-adjusted, pay attention to me!','img/' + curImage + '_head.png','audio/why.ogg','Emogotchi says');
+  	spawnNotification('Whaaa, I\'m becoming well-adjusted, pay attention to me!','img/' + curImage + '_head.png','Emogotchi says');
     mainImage.src = 'img/' + curImage + '.png';
     updateImage = curImage;
   }
@@ -93,15 +93,15 @@ function endGame() {
   welcomePanel.style.zIndex = '1';
   welcomePara.textContent = 'OH NO!! Your emo became too well-adjusted; now she\'ll be off to hang out at the mall, listen to Taylor Swift and bake cookies.'
   btnStart.textContent = 'Restart Emogotchi?';
+  spawnNotification('YOU TOTAL LOSER. How could do do this to me?','img/' + curImage + '_head.png','Emogotchi says');
 }
 
 // spawn a permission
 
-function spawnNotification(theBody,theIcon,theSound,theTitle) {
+function spawnNotification(theBody,theIcon,theTitle) {
   var options = {
   	body: theBody,
   	icon: theIcon,
-  	sound: theSound,
   }
   var n = new Notification(theTitle,options);
 }
@@ -111,7 +111,6 @@ function randomNotification() {
   var options = {
   	body: randomQuote,
   	icon: 'img/sad_head.png',
-  	sound: 'audio/why.ogg',
   } 
 
 	var n = new Notification('Emogotchi says',options);
@@ -140,3 +139,8 @@ function mainLoop() {
     window.requestAnimationFrame(mainLoop);
   }
 }
+
+// handle the sound
+
+var emoSound = document.querySelector('audio');
+
