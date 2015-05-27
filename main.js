@@ -101,7 +101,7 @@ function endGame() {
 function spawnNotification(theBody,theIcon,theTitle) {
   var options = {
   	body: theBody,
-  	icon: theIcon,
+  	icon: theIcon
   }
   var n = new Notification(theTitle,options);
 }
