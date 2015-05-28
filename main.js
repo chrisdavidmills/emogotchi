@@ -1,4 +1,4 @@
-// declare global variables
+ // declare global variables
 
 var score;
 var whingeTally = 0;
@@ -104,6 +104,7 @@ function spawnNotification(theBody,theIcon,theTitle) {
   	icon: theIcon
   }
   var n = new Notification(theTitle,options);
+  setTimeout(n.close.bind(n), 4000); 
 }
 
 function randomNotification() {
@@ -114,6 +115,7 @@ function randomNotification() {
   } 
 
 	var n = new Notification('Emogotchi says',options);
+  setTimeout(n.close.bind(n), 4000); 
 }
 
 function quoteChooser() {
