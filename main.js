@@ -1,4 +1,4 @@
- // declare global variables
+// declare global variables
 
 var score;
 var whingeTally = 0;
@@ -57,7 +57,7 @@ Notification.requestPermission();
 
 function updateProgress() {
   var percent = Math.floor((score/10000) * 100);
-  curLevel.style.width =  percent + '%';
+  curLevel.style.width = percent + '%';
   curLevelPara.textContent = 'Emo-level: ' + percent + '%';
 }
 
@@ -69,7 +69,7 @@ function updateDisplay() {
   }
 
   if(score <= 2000) {
-    curImage = 'well-adjusted'; 
+    curImage = 'well-adjusted';
   } else if(score > 2000 && score <= 5000) {
     curImage = 'happy';
   } else if(score > 5000 && score <= 8000) {
@@ -79,7 +79,7 @@ function updateDisplay() {
   }
 
   if(updateImage !== curImage) {
-  	spawnNotification('Whaaa, I\'m becoming well-adjusted, pay attention to me!','img/' + curImage + '_head.png','Emogotchi says');
+    spawnNotification('Whaaa, I\'m becoming well-adjusted, pay attention to me!', 'img/' + curImage + '_head.png', 'Emogotchi says');
     mainImage.src = 'img/' + curImage + '.png';
     updateImage = curImage;
   }
@@ -93,43 +93,43 @@ function endGame() {
   welcomePanel.style.zIndex = '1';
   welcomePara.textContent = 'OH NO!! Your emo became too well-adjusted; now she\'ll be off to hang out at the mall, listen to Taylor Swift and bake cookies.'
   btnStart.textContent = 'Restart Emogotchi?';
-  spawnNotification('YOU TOTAL LOSER. How could you do this to me?','img/' + curImage + '_head.png','Emogotchi says');
+  spawnNotification('YOU TOTAL LOSER. How could you do this to me?', 'img/' + curImage + '_head.png', 'Emogotchi says');
 }
 
 // spawn a permission
 
-function spawnNotification(theBody,theIcon,theTitle) {
+function spawnNotification(theBody, theIcon, theTitle) {
   var options = {
-  	body: theBody,
-  	icon: theIcon
+    body: theBody,
+    icon: theIcon
   }
-  var n = new Notification(theTitle,options);
-  setTimeout(n.close.bind(n), 4000); 
+  var n = new Notification(theTitle, options);
+  setTimeout(n.close.bind(n), 4000);
 }
 
 function randomNotification() {
   var randomQuote = quoteChooser();
   var options = {
-  	body: randomQuote,
-  	icon: 'img/sad_head.png',
-  } 
+    body: randomQuote,
+    icon: 'img/sad_head.png',
+  }
 
-	var n = new Notification('Emogotchi says',options);
-  setTimeout(n.close.bind(n), 4000); 
+  var n = new Notification('Emogotchi says', options);
+  setTimeout(n.close.bind(n), 4000);
 }
 
 function quoteChooser() {
-    var randomNumber = Math.floor(Math.random() * 10);
-    quote = quotes[randomNumber];
-	return quote;
+  var randomNumber = Math.floor(Math.random() * 10);
+  quote = quotes[randomNumber];
+  return quote;
 }
 
 // run main loop
 
 function mainLoop() {
-	score -= 3;
-	whingeTally += 1;
-	updateDisplay();
+  score -= 3;
+  whingeTally += 1;
+  updateDisplay();
   if(score <= 0) {
     score = 0;
     endGame();
@@ -137,7 +137,7 @@ function mainLoop() {
     if(whingeTally % 750 === 0) {
       randomNotification();
     }
-  
+
     window.requestAnimationFrame(mainLoop);
   }
 }
@@ -145,4 +145,3 @@ function mainLoop() {
 // handle the sound
 
 var emoSound = document.querySelector('audio');
-
