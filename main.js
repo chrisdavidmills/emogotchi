@@ -51,7 +51,9 @@ for(i = 0; i < btnScore.length; i++) {
 
 // get permission to run notifications
 
-Notification.requestPermission();
+Notification.requestPermission().then(function(result) {
+  console.log(result);
+});
 
 // update misery progress bar
 
