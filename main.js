@@ -71,7 +71,7 @@ function updateDisplay() {
   if(score > 10000) {
     score = 10000;
   }
-  
+
   if(score <= 2000) {
     curImage = 'well-adjusted';
   } else if(score > 2000 && score <= 5000) {
@@ -82,8 +82,12 @@ function updateDisplay() {
     curImage = 'emo';
   }
 
-  if(updateImage !== curImage && heads.indexOf(updateImage)<heads.indexOf(curImage)) {
-    spawnNotification('Whaaa, I\'m becoming well-adjusted, pay attention to me!', 'img/' + curImage + '_head.png', 'Emogotchi says');
+  if(updateImage !== curImage) {
+    if(heads.indexOf(updateImage) > heads.indexOf(curImage)) {
+      spawnNotification('Whaaa, I\'m becoming well-adjusted, pay attention to me!', 'img/' + curImage + '_head.png', 'Emogotchi says');
+    } else {
+      spawnNotification('That\'s better — I can feel the darkening!', 'img/' + curImage + '_head.png', 'Emogotchi says');
+    }
     mainImage.src = 'img/' + curImage + '.png';
     updateImage = curImage;
   }
